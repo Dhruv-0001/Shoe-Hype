@@ -248,7 +248,6 @@ pyreadline                    2.1
 pyrsistent                    0.18.0
 PySocks                       1.7.1
 pytest                        7.1.1
-python                        3.10.7
 python-dateutil               2.8.2
 python-lsp-black              1.0.0
 python-lsp-jsonrpc            1.0.0
