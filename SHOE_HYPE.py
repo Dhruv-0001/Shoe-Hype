@@ -66,9 +66,9 @@ with col13:
 with col14:
       st.image('https://upload.wikimedia.org/wikipedia/commons/f/fa/Bally_Ascar_shoe.gif')
 
-l=['https://images.meesho.com/images/products/89867327/hh4s5_512.jpg', 'https://m.media-amazon.com/images/I/81i057rz8gS._UL1500_.jpg']
+#l=['https://images.meesho.com/images/products/89867327/hh4s5_512.jpg', 'https://m.media-amazon.com/images/I/81i057rz8gS._UL1500_.jpg']
 
-st.image(l[0])
+#st.image(l[0])
 
 feature_list = np.array(pickle.load(open('embeddings_shoes.pkl','rb')))
 filenames = pickle.load(open('filenames_shoes.pkl','rb'))
@@ -159,23 +159,24 @@ if uploaded_file is not None:
 
     if st.button('SHOW RECOMMENDATIONS'):
   
-        tab1, tab2, tab3,tab4,tab5 = st.tabs(["TAB 1", "TAB 2", "TAB 3",'TAB 4','TAB 5'])
+        tab1 = st.tabs(["TAB 1"])
 
         with tab1:
           col1, col2= st.columns(2)
           with col1:
-            basewidth = 180
+            ok=filenames[indices[0][0]].replace('\\','/')
+            '''basewidth = 180
             img =Image.open(filenames[indices[0][0]].replace('\\','/'))
             wpercent = (basewidth / float(img.size[0]))
             hsize = int((float(img.size[1]) * float(wpercent)))
-            img = img.resize((basewidth, hsize), Image.ANTIALIAS)
-            st.image(img)
+            img = img.resize((basewidth, hsize), Image.ANTIALIAS)'''
+            st.image(ok)
           with col2:
             v=(product['DESCRIPTION'][ref.index(ls[0])]).split(" ")[0:3]
             st.title(' '.join([str(elem) for elem in v]))
             st.markdown(product['PAGE URL'][ref.index(ls[0])], unsafe_allow_html=True)
 
-        with tab2:           
+        '''with tab2:           
           col3, col4= st.columns(2)
           with col3:
             basewidth = 180
@@ -229,7 +230,7 @@ if uploaded_file is not None:
           with col10:
             v4=(product['DESCRIPTION'][ref.index(ls[4])]).split(" ")[0:3]
             st.title(' '.join([str(elem) for elem in v4]))
-            st.markdown(product['PAGE URL'][ref.index(ls[4])], unsafe_allow_html=True)
+            st.markdown(product['PAGE URL'][ref.index(ls[4])], unsafe_allow_html=True)'''
 
       
     
