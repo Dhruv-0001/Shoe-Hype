@@ -101,8 +101,8 @@ def recommend(features,feature_list):
   distances, indices = neighbors.kneighbors([features])
   return indices
 
-product = pd.read_csv('C:/PROGRAMMING/PYTHON LANGUAGE/projects/SHOE-HYPE-PROJECT/PROJECT SHOES DATASET_CSV.csv')
-data = os.listdir("C:/PROGRAMMING/PYTHON LANGUAGE/projects/SHOE-HYPE-PROJECT/SHOES IMAGES")
+product = pd.read_csv('C:/PROGRAMMING/PYTHON LANGUAGE/projects/SHOE-HYPE-PROJECT/dataset_csv.csv')
+data = os.listdir("C:/PROGRAMMING/PYTHON LANGUAGE/projects/SHOE-HYPE-PROJECT/SHOES_IMAGES")
 
 st.subheader("INSTRUCTIONS:")
 st.markdown("FOR BETTER RECOMMENDATIONS UPLOAD THE IMAGES WHICH ONLY HAVE SHOES AND HAVE WHITE BACKGROUND.")
