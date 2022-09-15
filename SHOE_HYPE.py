@@ -165,6 +165,7 @@ if uploaded_file is not None:
           col1, col2= st.columns(2)
           with col1:
             ok=filenames[indices[0][0]].replace('\\','//')
+            st.text(ok)
             st.image(ok)
           with col2:
             v=(product['DESCRIPTION'][ref.index(ls[0])]).split(" ")[0:3]
