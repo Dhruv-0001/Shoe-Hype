@@ -159,38 +159,29 @@ if uploaded_file is not None:
 
     if st.button('SHOW RECOMMENDATIONS'):
   
-        tab1 = st.tabs(["TAB 1"])
+        tab1, tab2 = st.tabs(['one','two'])
 
         with tab1:
           col1, col2= st.columns(2)
           with col1:
-            ok=filenames[indices[0][0]].replace('\\','/')
-            '''basewidth = 180
-            img =Image.open(filenames[indices[0][0]].replace('\\','/'))
-            wpercent = (basewidth / float(img.size[0]))
-            hsize = int((float(img.size[1]) * float(wpercent)))
-            img = img.resize((basewidth, hsize), Image.ANTIALIAS)'''
+            ok=filenames[indices[0][0]].replace('\\','//')
             st.image(ok)
           with col2:
             v=(product['DESCRIPTION'][ref.index(ls[0])]).split(" ")[0:3]
             st.title(' '.join([str(elem) for elem in v]))
             st.markdown(product['PAGE URL'][ref.index(ls[0])], unsafe_allow_html=True)
 
-        '''with tab2:           
+        with tab2:           
           col3, col4= st.columns(2)
           with col3:
-            basewidth = 180
-            img =Image.open(filenames[indices[0][1]].replace('\\','/'))
-            wpercent = (basewidth / float(img.size[0]))
-            hsize = int((float(img.size[1]) * float(wpercent)))
-            img = img.resize((basewidth, hsize), Image.ANTIALIAS)
-            st.image(img)
+            ok2 =Image.open(filenames[indices[0][1]].replace('\\','/'))
+            st.image(ok2)
           with col4:
             v1=(product['DESCRIPTION'][ref.index(ls[1])]).split(" ")[0:3]
             st.title(' '.join([str(elem) for elem in v1]))
             st.markdown(product['PAGE URL'][ref.index(ls[1])], unsafe_allow_html=True)
         
-        with tab3:
+        '''with tab3:
           col5, col6= st.columns(2)
           with col5:
             basewidth = 180
