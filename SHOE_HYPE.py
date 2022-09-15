@@ -49,6 +49,7 @@ with col13:
     st.markdown('**DHRUV TYAGI**')
     st.markdown('📞 : 7983061818' )
     st.markdown('📧 : dhruvtyagionly1@gmail.com')
+    st.markdown('https://www.linkedin.com/in/dhruv-tyagi-9a526b218')
     if st.button('LINKEDIN🔗'):
       js = "window.open('https://www.linkedin.com/in/dhruv-tyagi-9a526b218')"  
       js = "window.location.href = 'https://www.linkedin.com/in/dhruv-tyagi-9a526b218'" 
@@ -101,8 +102,8 @@ def recommend(features,feature_list):
   distances, indices = neighbors.kneighbors([features])
   return indices
 
-product = pd.read_csv('C:\PROGRAMMING\PYTHON LANGUAGE\projects\SHOE-HYPE-PROJECT\dataset_csv.csv')
-data = os.listdir("C:/PROGRAMMING/PYTHON LANGUAGE/projects/SHOE-HYPE-PROJECT/SHOES_IMAGES")
+product = pd.read_csv('dataset_csv.csv')
+data = os.listdir("SHOES_IMAGES")
 
 st.subheader("INSTRUCTIONS:")
 st.markdown("FOR BETTER RECOMMENDATIONS UPLOAD THE IMAGES WHICH ONLY HAVE SHOES AND HAVE WHITE BACKGROUND.")
