@@ -164,7 +164,7 @@ if uploaded_file is not None:
         with tab1:
           col1, col2= st.columns(2)
           with col1:
-            ok=filenames[indices[0][0]].replace('\\','//')
+            ok=os.path.join('https://m.media-amazon.com/images/I/', list(filenames[indices[0][0]].split("\\"))[1] )
             st.text(ok)
             st.image(ok)
           with col2:
