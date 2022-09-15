@@ -12,7 +12,7 @@ import os
 import pickle
 from tqdm import tqdm
 from sklearn.neighbors import NearestNeighbors
-import cv2
+#import cv2
 import webbrowser
 from bokeh.models.widgets import Div
 
