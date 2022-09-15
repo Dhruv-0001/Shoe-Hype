@@ -39,36 +39,33 @@ with colb:
 
 col13, col14 = st.columns(2)
 with col13:
-  st.image("https://media3.giphy.com/media/ejcoQeKAnFab6/200w.webp?cid=ecf05e4703ksn0xzhw3200woparv24uubirsfyue6yk3u7m0&rid=200w.webp&ct=g")
+  st.image("https://i.pinimg.com/originals/1f/f5/94/1ff594ed96063b9db4866efaaa864ef6.gif")
   if st.button('ABOUT THE WEBSITE'):
-    st.markdown("HOLA EVERYONE✌️ WELCOME TO THE **SHOE HYPE〽️. JUST UPLOAD THE IMAGE OF SHOE AND GET RECOMMENDATIONS BASED ON IT.** THIS IS A **CNN** BASED RECOMMENDER SYSTEM WHICH USES **RESNET** FOR FEATURE EXTRACTION. THE FEATURES OF UPLOADED IMAGE ARE COMPARED WITH THE HELP OF **SCIKIT LEARN**. THEN THE IMAGES ARE RECOMMENDED AND THE ACCOMPANIED DATA IS FETCHED FROM THE DATASET. DEVELOPED BY - **DHRUV TYAGI**.")
+    st.markdown("HOLA EVERYONE✌️ WELCOME TO THE **SHOE HYPE〽️. JUST UPLOAD THE IMAGE OF SHOE AND GET RECOMMENDATIONS BASED ON IT.** THIS IS A **CNN** BASED RECOMMENDER SYSTEM WHICH USES **RESNET** FOR FEATURE EXTRACTION. THE FEATURES OF UPLOADED IMAGE ARE COMPARED WITH THE HELP OF **SCIKIT LEARN**. THEN THE IMAGES ARE RECOMMENDED AND THE ACCOMPANIED DATA IS FETCHED FROM THE DATASET. DEVELOPED BY -- @**DHRUV TYAGI**.")
   if (
-    st.button(' CONNECT WITH US.', on_click=callback)
+    st.button('CONNECT WITH US !', on_click=callback)
   or st.session_state.button_clicked):
 
     st.markdown('**DHRUV TYAGI**')
-    st.markdown('📞 : 7983061818' )
-    st.markdown('📧 : dhruvtyagionly1@gmail.com')
-    st.markdown('https://www.linkedin.com/in/dhruv-tyagi-9a526b218')
-    if st.button('LINKEDIN🔗'):
-      js = "window.open('https:\\www.linkedin.com\in\dhruv-tyagi-9a526b218')"  
-      js = "window.location.href = 'https:\\www.linkedin.com\in\dhruv-tyagi-9a526b218'" 
+    st.markdown('📞 +917983061818' )
+    st.markdown('🖄 dhruvtyagionly1@gmail.com')
+    if st.button('LINKEDIN'):
+      js = "window.open('https://www.linkedin.com/in/dhruv-tyagi-9a526b218/')"  
+      js = "window.location.href = 'https://www.linkedin.com/in/dhruv-tyagi-9a526b218/'" 
       html = '<img src onerror="{}">'.format(js)
       div = Div(text=html)
       st.bokeh_chart(div)
-    if st.button('INSTAGRAM🔗'):
-      js = "window.open('https:\\www.instagram.com\iamdhruv.tyagi\\')"  
-      js = "window.location.href = 'https:\\www.instagram.com\iamdhruv.tyagi\\'" 
+    if st.button('INSTAGRAM'):
+      js = "window.open('https://www.instagram.com/iamdhruv.tyagi/')"  
+      js = "window.location.href = 'https://www.instagram.com/iamdhruv.tyagi/'" 
       html = '<img src onerror="{}">'.format(js)
       div = Div(text=html)
       st.bokeh_chart(div)
 
 with col14:
+      st.image("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d46df6106232211.5f8b32696e3a7.gif")  
       st.image('https://upload.wikimedia.org/wikipedia/commons/f/fa/Bally_Ascar_shoe.gif')
-
-#l=['https://images.meesho.com/images/products/89867327/hh4s5_512.jpg', 'https://m.media-amazon.com/images/I/81i057rz8gS._UL1500_.jpg']
-
-#st.image(l[0])
+      
 
 feature_list = np.array(pickle.load(open('embeddings_shoes.pkl','rb')))
 filenames = pickle.load(open('filenames_shoes.pkl','rb'))
@@ -109,7 +106,7 @@ product = pd.read_csv('dataset_csv.csv')
 data = os.listdir("SHOES_IMAGES")
 
 st.subheader("INSTRUCTIONS:")
-st.markdown("FOR BETTER RECOMMENDATIONS UPLOAD THE IMAGES WHICH ONLY HAVE SHOES AND HAVE WHITE BACKGROUND.")
+st.markdown("__FOR BETTER RECOMMENDATIONS UPLOAD THE IMAGES WHICH ONLY HAVE SHOES AND HAVE WHITE BACKGROUND.__")
 uploaded_file = st.file_uploader("Choose an image") 
 if uploaded_file is not None:
   if save_uploaded_file(uploaded_file):
@@ -135,7 +132,6 @@ if uploaded_file is not None:
         d.append('INFORMATION NOT FOUND IN DATABASE')
       i=+1
       
-
     u=[]
     for i in ls:
       try :
@@ -159,7 +155,7 @@ if uploaded_file is not None:
 
     if st.button('SHOW RECOMMENDATIONS'):
   
-        tab1, tab2 = st.tabs(['one','two'])
+        tab1, tab2, tab3, tab4, tab5 = st.tabs(['TAB1','TAB2','TAB3','TAB4','TAB5'])
 
         with tab1:
           col1, col2= st.columns(2)
@@ -168,67 +164,46 @@ if uploaded_file is not None:
             st.image(ok)
           with col2:
             v=(product['DESCRIPTION'][ref.index(ls[0])]).split(" ")[0:3]
-            st.title(' '.join([str(elem) for elem in v]))
+            st.title((' '.join([str(elem) for elem in v])).upper())
             st.markdown(product['PAGE URL'][ref.index(ls[0])], unsafe_allow_html=True)
 
         with tab2:           
           col3, col4= st.columns(2)
           with col3:
-            ok=os.path.join('https://m.media-amazon.com/images/I/', list(filenames[indices[0][1]].split("\\"))[1] )
-            basewidth = 180
-            img =Image.open(ok)
-            wpercent = (basewidth / float(img.size[0]))
-            hsize = int((float(img.size[1]) * float(wpercent)))
-            img = img.resize((basewidth, hsize), Image.ANTIALIAS)
-            st.image(img)
+             ok=os.path.join('https://m.media-amazon.com/images/I/', list(filenames[indices[0][1]].split("\\"))[1] )
+             st.image(ok)
           with col4:
             v1=(product['DESCRIPTION'][ref.index(ls[1])]).split(" ")[0:3]
-            st.title(' '.join([str(elem) for elem in v1]))
+            st.title((' '.join([str(elem) for elem in v1])).upper())
             st.markdown(product['PAGE URL'][ref.index(ls[1])], unsafe_allow_html=True)
         
-        '''with tab3:
+        with tab3:
           col5, col6= st.columns(2)
           with col5:
-            basewidth = 180
-            img =Image.open(filenames[indices[0][2]].replace('\\','/'))
-            wpercent = (basewidth / float(img.size[0]))
-            hsize = int((float(img.size[1]) * float(wpercent)))
-            img = img.resize((basewidth, hsize), Image.ANTIALIAS)
-            st.image(img)
+             ok=os.path.join('https://m.media-amazon.com/images/I/', list(filenames[indices[0][2]].split("\\"))[1] )
+             st.image(ok)
           with col6:
             v2=(product['DESCRIPTION'][ref.index(ls[2])]).split(" ")[0:3]
-            st.title(' '.join([str(elem) for elem in v2]))
+            st.title((' '.join([str(elem) for elem in v2])).upper())
             st.markdown(product['PAGE URL'][ref.index(ls[2])], unsafe_allow_html=True)
           
         with tab4:
           col7, col8= st.columns(2)
           with col7:
-            basewidth = 180
-            img =Image.open(filenames[indices[0][3]].replace('\\','/'))
-            wpercent = (basewidth / float(img.size[0]))
-            hsize = int((float(img.size[1]) * float(wpercent)))
-            img = img.resize((basewidth, hsize), Image.ANTIALIAS)
-            st.image(img)
+             ok=os.path.join('https://m.media-amazon.com/images/I/', list(filenames[indices[0][3]].split("\\"))[1] )
+             st.image(ok)
           with col8:
             v3=(product['DESCRIPTION'][ref.index(ls[3])]).split(" ")[0:3]
-            st.title(' '.join([str(elem) for elem in v3]))
+            st.title((' '.join([str(elem) for elem in v3])).upper())
             st.markdown(product['PAGE URL'][ref.index(ls[3])], unsafe_allow_html=True)
       
         with tab5:
           col9, col10= st.columns(2)
           with col9:
-            basewidth = 180
-            img =Image.open(filenames[indices[0][4]].replace('\\','/'))
-            wpercent = (basewidth / float(img.size[0]))
-            hsize = int((float(img.size[1]) * float(wpercent)))
-            img = img.resize((basewidth, hsize), Image.ANTIALIAS)
-            st.image(img)
+             ok=os.path.join('https://m.media-amazon.com/images/I/', list(filenames[indices[0][4]].split("\\"))[1] )
+             st.image(ok)
           with col10:
             v4=(product['DESCRIPTION'][ref.index(ls[4])]).split(" ")[0:3]
-            st.title(' '.join([str(elem) for elem in v4]))
-            st.markdown(product['PAGE URL'][ref.index(ls[4])], unsafe_allow_html=True)'''
-
-      
-    
-
+            st.text((' '.join([str(elem) for elem in v4])).upper())
+            st.markdown(product['PAGE URL'][ref.index(ls[4])], unsafe_allow_html=True)
       
