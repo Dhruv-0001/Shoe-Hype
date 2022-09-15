@@ -1,4 +1,4 @@
-opencv-python==4.6.0.66
+opencv-python==4.5.5.64
 scikit-learn==1.0.2
 keras==2.9.0
 streamlit==1.12.2
