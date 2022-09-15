@@ -101,7 +101,7 @@ def recommend(features,feature_list):
   distances, indices = neighbors.kneighbors([features])
   return indices
 
-product = pd.read_csv('C:/PROGRAMMING/PYTHON LANGUAGE/projects/SHOE-HYPE-PROJECT/dataset_csv.csv')
+product = pd.read_csv('C:\PROGRAMMING\PYTHON LANGUAGE\projects\SHOE-HYPE-PROJECT\dataset_csv.csv')
 data = os.listdir("C:/PROGRAMMING/PYTHON LANGUAGE/projects/SHOE-HYPE-PROJECT/SHOES_IMAGES")
 
 st.subheader("INSTRUCTIONS:")
