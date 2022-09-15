@@ -51,14 +51,14 @@ with col13:
     st.markdown('📧 : dhruvtyagionly1@gmail.com')
     st.markdown('https://www.linkedin.com/in/dhruv-tyagi-9a526b218')
     if st.button('LINKEDIN🔗'):
-      js = "window.open('https://www.linkedin.com/in/dhruv-tyagi-9a526b218')"  
-      js = "window.location.href = 'https://www.linkedin.com/in/dhruv-tyagi-9a526b218'" 
+      js = "window.open('https:\\www.linkedin.com\in\dhruv-tyagi-9a526b218')"  
+      js = "window.location.href = 'https:\\www.linkedin.com\in\dhruv-tyagi-9a526b218'" 
       html = '<img src onerror="{}">'.format(js)
       div = Div(text=html)
       st.bokeh_chart(div)
     if st.button('INSTAGRAM🔗'):
-      js = "window.open('https://www.instagram.com/iamdhruv.tyagi/')"  
-      js = "window.location.href = 'https://www.instagram.com/iamdhruv.tyagi/'" 
+      js = "window.open('https:\\www.instagram.com\iamdhruv.tyagi\\')"  
+      js = "window.location.href = 'https:\\www.instagram.com\iamdhruv.tyagi\\'" 
       html = '<img src onerror="{}">'.format(js)
       div = Div(text=html)
       st.bokeh_chart(div)
@@ -80,7 +80,7 @@ model = tensorflow.keras.Sequential([
 
 def save_uploaded_file (uploaded_file):
   try:
-      with open (os.path.join('C:/PROGRAMMING/PYTHON LANGUAGE/projects/SHOE-HYPE-PROJECT/uploads', uploaded_file.name),'wb') as f:
+      with open (os.path.join('uploads', uploaded_file.name),'wb') as f:
         f.write(uploaded_file.getbuffer())
       return 1
   except:
@@ -112,7 +112,7 @@ if uploaded_file is not None:
   if save_uploaded_file(uploaded_file):
     display_image = Image.open(uploaded_file)
 
-    features = extract_features(os.path.join('C:/PROGRAMMING/PYTHON LANGUAGE/projects/SHOE-HYPE-PROJECT/uploads',uploaded_file.name),model)
+    features = extract_features(os.path.join('uploads',uploaded_file.name),model)
 
     indices=recommend(features,feature_list)
     value = indices.tolist()[0]
