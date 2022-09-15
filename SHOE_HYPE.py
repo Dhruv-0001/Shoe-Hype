@@ -165,7 +165,6 @@ if uploaded_file is not None:
           col1, col2= st.columns(2)
           with col1:
             ok=os.path.join('https://m.media-amazon.com/images/I/', list(filenames[indices[0][0]].split("\\"))[1] )
-            st.text(ok)
             st.image(ok)
           with col2:
             v=(product['DESCRIPTION'][ref.index(ls[0])]).split(" ")[0:3]
@@ -175,8 +174,13 @@ if uploaded_file is not None:
         with tab2:           
           col3, col4= st.columns(2)
           with col3:
-            ok2 =Image.open(filenames[indices[0][1]].replace('\\','/'))
-            st.image(ok2)
+            ok=os.path.join('https://m.media-amazon.com/images/I/', list(filenames[indices[0][1]].split("\\"))[1] )
+            basewidth = 180
+            img =Image.open(ok)
+            wpercent = (basewidth / float(img.size[0]))
+            hsize = int((float(img.size[1]) * float(wpercent)))
+            img = img.resize((basewidth, hsize), Image.ANTIALIAS)
+            st.image(img)
           with col4:
             v1=(product['DESCRIPTION'][ref.index(ls[1])]).split(" ")[0:3]
             st.title(' '.join([str(elem) for elem in v1]))
