@@ -66,6 +66,9 @@ with col13:
 with col14:
       st.image('https://upload.wikimedia.org/wikipedia/commons/f/fa/Bally_Ascar_shoe.gif')
 
+l=['https://images.meesho.com/images/products/89867327/hh4s5_512.jpg', 'https://m.media-amazon.com/images/I/81i057rz8gS._UL1500_.jpg']
+
+st.image(l[0])
 
 feature_list = np.array(pickle.load(open('embeddings_shoes.pkl','rb')))
 filenames = pickle.load(open('filenames_shoes.pkl','rb'))
