@@ -96,7 +96,7 @@ product = pd.read_csv('dataset_csv.csv')
 data = os.listdir("SHOES_IMAGES")
 
 st.subheader("INSTRUCTIONS:")
-st.markdown("__FOR BETTER RECOMMENDATIONS UPLOAD THE IMAGES WHICH ONLY HAVE SHOES AND HAVE WHITE BACKGROUND.__")
+st.markdown("__FOR BETTER RECOMMENDATIONS UPLOAD THE IMAGES WHICH ONLY HAVE SHOE PRODUCT, ALINGED HORIZONTALLY AND HAVE WHITE BACKGROUND.__")
 uploaded_file = st.file_uploader("Choose an image") 
 if uploaded_file is not None:
   if save_uploaded_file(uploaded_file):
