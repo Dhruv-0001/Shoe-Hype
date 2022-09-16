@@ -12,7 +12,6 @@ import os
 import pickle
 from tqdm import tqdm
 from sklearn.neighbors import NearestNeighbors
-#import cv2
 import webbrowser
 from bokeh.models.widgets import Div
 
@@ -50,17 +49,8 @@ with col13:
     st.markdown('📞 +917983061818' )
     st.markdown('🖄 dhruvtyagionly1@gmail.com')
     if st.button('LINKEDIN'):
-      js = "window.open('https://www.linkedin.com/in/dhruv-tyagi-9a526b218/')"  
-      js = "window.location.href = 'https://www.linkedin.com/in/dhruv-tyagi-9a526b218/'" 
-      html = '<img src onerror="{}">'.format(js)
-      div = Div(text=html)
-      st.bokeh_chart(div)
-    if st.button('INSTAGRAM'):
-      js = "window.open('https://www.instagram.com/iamdhruv.tyagi/')"  
-      js = "window.location.href = 'https://www.instagram.com/iamdhruv.tyagi/'" 
-      html = '<img src onerror="{}">'.format(js)
-      div = Div(text=html)
-      st.bokeh_chart(div)
+      webbrowser.open('https://www.linkedin.com/in/dhruv-tyagi-9a526b218/')
+
 
 with col14:
       st.image("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d46df6106232211.5f8b32696e3a7.gif")  
