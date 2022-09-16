@@ -34,7 +34,7 @@ cola,colb=st.columns(2)
 with cola:
   print(" ")
 with colb:
-  st.markdown("**©️COPYRIGHT @DHRUV_TYAGI**")
+  st.markdown("©️COPYRIGHT @DHRUV_TYAGI")
 
 col13, col14 = st.columns(2)
 with col13:
@@ -49,11 +49,13 @@ with col13:
     st.markdown('📞 +917983061818' )
     st.markdown('🖄 dhruvtyagionly1@gmail.com')
     if st.button('LINKEDIN'):
-      webbrowser.open('https://www.linkedin.com/in/dhruv-tyagi-9a526b218/')
+      webbrowser.open_new_tab('https://www.linkedin.com/in/dhruv-tyagi-9a526b218/')
+    if st.button('INSTAGRAM'):
+      webbrowser.open_new_tab('https://www.instagram.com/iamdhruv.tyagi/')
 
 
 with col14:
-      st.image("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d46df6106232211.5f8b32696e3a7.gif")  
+      st.image("https://i.pinimg.com/originals/c5/d0/22/c5d0226ce2a6ccb7266f76183712d6f1.gif")  
       st.image('https://upload.wikimedia.org/wikipedia/commons/f/fa/Bally_Ascar_shoe.gif')
       
 
@@ -196,4 +198,3 @@ if uploaded_file is not None:
             v4=(product['DESCRIPTION'][ref.index(ls[4])]).split(" ")[0:3]
             st.text((' '.join([str(elem) for elem in v4])).upper())
             st.markdown(product['PAGE URL'][ref.index(ls[4])], unsafe_allow_html=True)
-      
