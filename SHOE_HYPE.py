@@ -49,16 +49,14 @@ with col13:
     st.markdown('📞 +917983061818' )
     st.markdown('🖄 dhruvtyagionly1@gmail.com')
     if st.button('LINKEDIN'):
-      webbrowser.open_new_tab('https://www.linkedin.com/in/dhruv-tyagi-9a526b218/')
+      st.markdown('🗟 https://www.linkedin.com/in/dhruv-tyagi-9a526b218/')
     if st.button('INSTAGRAM'):
-      webbrowser.open_new_tab('https://www.instagram.com/iamdhruv.tyagi/')
-
+      st.markdown('⧇ https://www.instagram.com/iamdhruv.tyagi/')
 
 with col14:
       st.image("https://i.pinimg.com/originals/c5/d0/22/c5d0226ce2a6ccb7266f76183712d6f1.gif")  
       st.image('https://upload.wikimedia.org/wikipedia/commons/f/fa/Bally_Ascar_shoe.gif')
       
-
 feature_list = np.array(pickle.load(open('embeddings_shoes.pkl','rb')))
 filenames = pickle.load(open('filenames_shoes.pkl','rb'))
 
