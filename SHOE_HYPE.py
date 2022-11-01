@@ -21,13 +21,6 @@ from st_functions import st_button_text
 
 load_css()
 
-hide_menu_style ="""
-    <style>
-    footer{visibility: hidden;}
-    </style>
-"""
-st.markdown(hide_menu_style, unsafe_allow_html =True)
-
 if "button_clicked" not in st.session_state:
   st.session_state.button_clicked = False
 def callback():
