@@ -84,8 +84,7 @@ def st_button_link(url, label):
         </p>'''
         return st.markdown(button_code, unsafe_allow_html=True)
     
-def (label,description):
-    
+def st_button_text(label,description):
     code=f'''
     <html>
     <head>
