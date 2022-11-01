@@ -14,6 +14,9 @@ from tqdm import tqdm
 from sklearn.neighbors import NearestNeighbors
 import webbrowser
 from bokeh.models.widgets import Div
+from st_functions import load_css,st_button,st_button_link,st_button_text
+
+load_css()
 
 hide_menu_style ="""
     <style>
