@@ -14,12 +14,13 @@ from tqdm import tqdm
 from sklearn.neighbors import NearestNeighbors
 import webbrowser
 from bokeh.models.widgets import Div
-from st_functions import load_css
-from st_functions import st_button
-from st_functions import st_button_link
-from st_functions import st_button_text
 
-load_css()
+hide_menu_style ="""
+    <style>
+    footer{visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_menu_style, unsafe_allow_html =True)
 
 if "button_clicked" not in st.session_state:
   st.session_state.button_clicked = False
