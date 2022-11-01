@@ -12,3 +12,5 @@ tk-tools==0.16.0
 tk==0.1.0
 bokeh==2.4.3
 MarkupSafe==2.0.1
+pathspec==0.7.0
+cssselect==1.1.0
