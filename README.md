@@ -1,9 +1,17 @@
 # SHOE-HYPE〽️
 
 <div align="center">
-<h3 align="center">ABOUT THE WEBSITE</h3>
+<h3 align="center">DESCRIPTION</h3>
   <h4>The Link of the Website:- https://dhruv-0001-shoe-hype-shoe-hype-8ebvwa.streamlitapp.com/</a></h4>
-<p>HOLA EVERYONE✌️ WELCOME TO THE <b> SHOE HYPE〽️.</b> JUST UPLOAD THE IMAGE OF SHOE AND GET RECOMMENDATIONS BASED ON IT. THIS IS A <b> CNN BASED RECOMMENDER SYSTEM WHICH USES  RESNET  FOR FEATURE EXTRACTION.</b> THE FEATURES OF UPLOADED IMAGE ARE COMPARED WITH THE HELP OF SCIKIT LEARN. THEN THE IMAGES ARE RECOMMENDED AND THE ACCOMPANIED DATA IS FETCHED FROM THE DATASET. DEVELOPED BY --<b> @DHRUV TYAGI </b> </p>
+<p>It is a Shoe Recommender System which recommends the shoes with buying option to the user similar to the uploaded image. 
+Further functionalities-
+-	It is CNN based Recommender System and uses RESNET for feature extraction.
+-	The Features of uploaded image are compared with the features of dataset images with the help of Scikit Learn pipeline.
+How to Use?
+-	First go to the Webpage and upload the image of the shoe one is looking for. 
+-	Then find the recommendations.
+-	Top 5 recommendations will be shown to the user along with the buying options.
+</p>
 </div>
 
 <div align="center">
