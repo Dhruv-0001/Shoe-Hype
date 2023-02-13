@@ -1,4 +1,4 @@
-# SHOE-HYPE〽️
+# Shoe-Hype〽️
 It is a Shoe Recommender System which recommends the shoes with buying option to the user similar to the uploaded image. 
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)                 
