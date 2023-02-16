@@ -13,7 +13,7 @@ import pickle
 from tqdm import tqdm
 from sklearn.neighbors import NearestNeighbors
 import webbrowser
-from bokeh.models.widgets import Div
+from button_link import *
 
 hide_menu_style ="""
     <style>
@@ -33,7 +33,7 @@ st.subheader("FOR THE ONE's ADDICTED TO SNEAKERS👟")
 col1, col2 = st.columns(2)
 with col1:
   st.image("https://i.pinimg.com/originals/1f/f5/94/1ff594ed96063b9db4866efaaa864ef6.gif")
-  if st.button('ABOUT THE WEBSITE'):
+  if st.button('ABOUT THE WEBSITE!'):
     st.markdown(" It is a **CNN** based Recommendor System which uses **RESNET** for feature extraction. The features of the uploaded image are compared with the help of **Scikit Learn**. Then the images are Recommended and the accompanied data is fetched from the dataset.")
 
 with col2:
@@ -81,12 +81,7 @@ data = os.listdir("SHOES_IMAGES")
 st.subheader("INSTRUCTIONS:")
 st.markdown("__FOR BETTER RECOMMENDATIONS UPLOAD THE IMAGES WHICH ONLY HAVE SHOE PRODUCT, ALINGED HORIZONTALLY AND HAVE WHITE BACKGROUND.__")
 st.markdown("DOWNLOAD SAMLE IMAGES FROM MY GITHUB")
-if st.button('Download'):
-    js = "window.open('https://github.com/Dhruv-0001/Sample-Images.git')"  # New tab or window
-    js = "window.location.href = 'https://github.com/Dhruv-0001/Sample-Images.git'"  # Current tab
-    html = '<img src onerror="{}">'.format(js)
-    div = Div(text=html)
-    st.bokeh_chart(div)
+st.markdown(get_st_button_a_tag('https://github.com/Dhruv-0001/Sample-Images.git', 'Download Sample'), unsafe_allow_html=True)
     
 uploaded_file = st.file_uploader("Choose an image") 
 if uploaded_file is not None:
@@ -203,26 +198,4 @@ if uploaded_file is not None:
             except :
               st.markdown('ERROR-INFORMATION NOT FOUND IN DATASET')
             
-        
-        
-def get_st_button_a_tag(url_link, button_name):
-    """
-    generate html a tag
-    :param url_link:
-    :param button_name:
-    :return:
-    """
-    return f'''
-    <a href={url_link}><button style="
-    fontWeight: 400;
-    padding: 0.25rem 0.75rem;
-    borderRadius: 0.25rem;
-    margin: 0px;
-    lineHeight: 1.6;
-    width: auto;
-    userSelect: none;
-    backgroundColor: #FFFFFF;
-    border: 1px solid rgba(49, 51, 63, 0.2);">{button_name}</button></a>
-    '''
-st.markdown(get_st_button_a_tag('https://github.com/Dhruv-0001/Sample-Images.git', 'Download'), unsafe_allow_html=True)
 
