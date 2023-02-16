@@ -81,7 +81,7 @@ data = os.listdir("SHOES_IMAGES")
 st.subheader("INSTRUCTIONS:")
 st.markdown("__FOR BETTER RECOMMENDATIONS UPLOAD THE IMAGES WHICH ONLY HAVE SHOE PRODUCT, ALINGED HORIZONTALLY AND HAVE WHITE BACKGROUND.__")
 st.markdown("DOWNLOAD SAMLE IMAGES FROM MY GITHUB")
-st.markdown(get_st_button_a_tag('https://github.com/Dhruv-0001/Sample-Images.git', 'Download Sample'), unsafe_allow_html=True)
+st.markdown(button_link('https://github.com/Dhruv-0001/Sample-Images.git', 'Download Sample'), unsafe_allow_html=True)
     
 uploaded_file = st.file_uploader("Choose an image") 
 if uploaded_file is not None:
