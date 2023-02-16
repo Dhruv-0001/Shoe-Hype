@@ -109,7 +109,7 @@ if uploaded_file is not None:
         d.append('INFORMATION NOT FOUND IN DATABASE')
       i=+1
       
-    u=[]
+    '''u=[]
     for i in ls:
       try :
         ref=product['REFERENCE'].tolist()
@@ -117,7 +117,7 @@ if uploaded_file is not None:
         u.append(product['PAGE URL'][ind])
       except:
         u.append("INFORMATION NOT FOUND IN DATABASE")
-      i=+1
+      i=+1'''
     
     def result_function(ind):
         col1, col2= st.columns(2)
@@ -158,3 +158,4 @@ if uploaded_file is not None:
         with tab5:
             result_function(4)
           
+st.markdown(button_link('https://www.linkedin.com/in/dhruvtyagi15/', 'Get Connected'), unsafe_allow_html=True)
