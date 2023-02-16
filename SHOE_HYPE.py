@@ -30,30 +30,13 @@ def callback():
 st.title('SHOE HYPE〽️')
 st.subheader("FOR THE ONE's ADDICTED TO SNEAKERS👟")
 
-cola,colb=st.columns(2)
-with cola:
-  print(" ")
-with colb:
-  st.markdown("©️COPYRIGHT @DHRUV_TYAGI")
-
-col13, col14 = st.columns(2)
-with col13:
+col1, col2 = st.columns(2)
+with col1:
   st.image("https://i.pinimg.com/originals/1f/f5/94/1ff594ed96063b9db4866efaaa864ef6.gif")
   if st.button('ABOUT THE WEBSITE'):
-    st.markdown("HOLA EVERYONE✌️ WELCOME TO THE **SHOE HYPE〽️. JUST UPLOAD THE IMAGE OF SHOE AND GET RECOMMENDATIONS BASED ON IT.** THIS IS A **CNN** BASED RECOMMENDER SYSTEM WHICH USES **RESNET** FOR FEATURE EXTRACTION. THE FEATURES OF UPLOADED IMAGE ARE COMPARED WITH THE HELP OF **SCIKIT LEARN**. THEN THE IMAGES ARE RECOMMENDED AND THE ACCOMPANIED DATA IS FETCHED FROM THE DATASET. DEVELOPED BY -- @**DHRUV TYAGI**.")
-  if (
-    st.button('CONNECT WITH US !', on_click=callback)
-  or st.session_state.button_clicked):
+    st.markdown(" It is a **CNN** based Recommendor System which uses **RESNET** for feature extraction. The features of the uploaded image are compared with the help of **Scikit Learn**. Then the images are Recommended and the accompanied data is fetched from the dataset.")
 
-    st.markdown('**DHRUV TYAGI**')
-    st.markdown('📞 +917983061818' )
-    st.markdown('🖄 dhruvtyagionly1@gmail.com')
-    if st.button('LINKEDIN'):
-      st.markdown('🗟 https://www.linkedin.com/in/dhruv-tyagi-9a526b218/')
-    if st.button('INSTAGRAM'):
-      st.markdown('⧇ https://www.instagram.com/iamdhruv.tyagi/')
-
-with col14:
+with col2:
       st.image("https://i.pinimg.com/originals/c5/d0/22/c5d0226ce2a6ccb7266f76183712d6f1.gif")  
       st.image('https://upload.wikimedia.org/wikipedia/commons/f/fa/Bally_Ascar_shoe.gif')
       
@@ -219,4 +202,27 @@ if uploaded_file is not None:
               st.markdown(product['PAGE URL'][ref.index(ls[4])], unsafe_allow_html=True)
             except :
               st.markdown('ERROR-INFORMATION NOT FOUND IN DATASET')
+            
+        
+        
+def get_st_button_a_tag(url_link, button_name):
+    """
+    generate html a tag
+    :param url_link:
+    :param button_name:
+    :return:
+    """
+    return f'''
+    <a href={url_link}><button style="
+    fontWeight: 400;
+    padding: 0.25rem 0.75rem;
+    borderRadius: 0.25rem;
+    margin: 0px;
+    lineHeight: 1.6;
+    width: auto;
+    userSelect: none;
+    backgroundColor: #FFFFFF;
+    border: 1px solid rgba(49, 51, 63, 0.2);">{button_name}</button></a>
+    '''
+st.markdown(get_st_button_a_tag('https://github.com/Dhruv-0001/Sample-Images.git', 'Download'), unsafe_allow_html=True)
 
