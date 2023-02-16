@@ -132,8 +132,25 @@ if uploaded_file is not None:
     if st.button('SHOW RECOMMENDATIONS'):
   
         tab1, tab2, tab3, tab4, tab5 = st.tabs(['TAB1','TAB2','TAB3','TAB4','TAB5'])
+        
+        for i in range(1,6):
+            tab=f'tab{i}'
+            with tab:
+                
+                col1, col2= st.columns(2)
+                with col1:
+                    ok=os.path.join('https://m.media-amazon.com/images/I/', list(filenames[indices[0][i-1]].split("\\"))[1] )
+                    st.image(ok)
+                with col2:
+                    try :
+                     v=(product['DESCRIPTION'][ref.index(ls[0])]).split(" ")[0:3]
+                     st.title((' '.join([str(elem) for elem in v])).upper())
+                     st.markdown(product['PAGE URL'][ref.index(ls[i-1])], unsafe_allow_html=True)
+                    except :
+                     st.markdown('ERROR-INFORMATION NOT FOUND IN DATASET')
+                
 
-        with tab1:
+       ''' with tab1:
           col1, col2= st.columns(2)
           with col1:
             ok=os.path.join('https://m.media-amazon.com/images/I/', list(filenames[indices[0][0]].split("\\"))[1] )
@@ -196,6 +213,6 @@ if uploaded_file is not None:
               st.text((' '.join([str(elem) for elem in v4])).upper())
               st.markdown(product['PAGE URL'][ref.index(ls[4])], unsafe_allow_html=True)
             except :
-              st.markdown('ERROR-INFORMATION NOT FOUND IN DATASET')
+              st.markdown('ERROR-INFORMATION NOT FOUND IN DATASET')'''
             
 
