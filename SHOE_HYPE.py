@@ -13,6 +13,7 @@ import pickle
 from tqdm import tqdm
 from sklearn.neighbors import NearestNeighbors
 import webbrowser
+from bokeh.models.widgets import Div
 from button_link import *
 
 hide_menu_style ="""
