@@ -14,6 +14,9 @@ from tqdm import tqdm
 from sklearn.neighbors import NearestNeighbors
 import webbrowser
 from bokeh.models.widgets import Div
+from st_functions import *
+
+icon_size = 20
 
 hide_menu_style ="""
     <style>
@@ -212,3 +215,9 @@ if uploaded_file is not None:
               st.markdown(product['PAGE URL'][ref.index(ls[4])], unsafe_allow_html=True)
             except :
               st.markdown('ERROR-INFORMATION NOT FOUND IN DATASET')
+            
+ 
+st_button('linkedin', 'https://www.linkedin.com/in/dhruv-tyagi-9a526b218/', 'LINKEDIN', icon_size)
+st_button('github', 'https://github.com/Dhruv-0001', 'GITHUB', icon_size)
+st_button('instagram', 'https://www.instagram.com/iamdhruv.tyagi/', 'INSTAGRAM', icon_size)
+st_button('', 'https://mail.google.com/mail/?view=cm&source=mailto&to=dhruvtyagionly1@gmail.com', 'dhruvtyagionly1@gmail.com', icon_size)
