@@ -97,7 +97,7 @@ data = os.listdir("SHOES_IMAGES")
 
 st.subheader("INSTRUCTIONS:")
 st.markdown("__FOR BETTER RECOMMENDATIONS UPLOAD THE IMAGES WHICH ONLY HAVE SHOE PRODUCT, ALINGED HORIZONTALLY AND HAVE WHITE BACKGROUND.__")
-st.markdown("DOWNLOAD SAMLE IMAGES FROM MY GITHUB,unsafe_allow_html =True)
+st.markdown("DOWNLOAD SAMLE IMAGES FROM MY GITHUB")
 if st.button('Download'):
     js = "window.open('https://github.com/Dhruv-0001/Sample-Images.git')"  # New tab or window
     js = "window.location.href = 'https://github.com/Dhruv-0001/Sample-Images.git'"  # Current tab
