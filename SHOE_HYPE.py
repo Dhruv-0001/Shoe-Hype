@@ -138,11 +138,11 @@ if uploaded_file is not None:
                 st.image(ok)
             with col2:
                 try :
-                 v=(product['DESCRIPTION'][ref.index(ls[ind])]).split(" ")[0:3]
-                 st.title((' '.join([str(elem) for elem in v])).upper())
-                 st.markdown(product['PAGE URL'][ref.index(ls[ind])], unsafe_allow_html=True)
+                    v=(product['DESCRIPTION'][ref.index(ls[ind])]).split(" ")[0:3]
+                    st.title((' '.join([str(elem) for elem in v])).upper())
+                    st.markdown(product['PAGE URL'][ref.index(ls[ind])], unsafe_allow_html=True)
                 except :
-                 st.markdown('ERROR-INFORMATION NOT FOUND IN DATASET')
+                    st.markdown('ERROR-INFORMATION NOT FOUND IN DATASET')
 
         tab1, tab2, tab3, tab4, tab5 = st.tabs(['TAB1','TAB2','TAB3','TAB4','TAB5'])
            
@@ -155,7 +155,18 @@ if uploaded_file is not None:
         with tab4:
             product(3)
         with tab5:
-            product(4)
+            
+            col1, col2= st.columns(2)
+            with col1:
+                ok=os.path.join('https://m.media-amazon.com/images/I/', list(filenames[indices[0][4]].split("\\"))[1] )
+                st.image(ok)
+            with col2:
+                try :
+                    v=(product['DESCRIPTION'][ref.index(ls[4])]).split(" ")[0:3]
+                    st.title((' '.join([str(elem) for elem in v])).upper())
+                    st.markdown(product['PAGE URL'][ref.index(ls[4])], unsafe_allow_html=True)
+                except :
+                    st.markdown('ERROR-INFORMATION NOT FOUND IN DATASET')
 
 
 
