@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 
 def button_link(url_link, button_name):
     """
@@ -20,4 +19,3 @@ def button_link(url_link, button_name):
     backgroundColor: #FFFFFF;
     border: 1px solid rgba(49, 51, 63, 0.2);">{button_name}</button></a>
     '''
-st.markdown(button_link('your link', 'button name'), unsafe_allow_html=True)
