@@ -145,53 +145,17 @@ if uploaded_file is not None:
                  st.markdown('ERROR-INFORMATION NOT FOUND IN DATASET')
 
         tab1, tab2, tab3, tab4, tab5 = st.tabs(['TAB1','TAB2','TAB3','TAB4','TAB5'])
-    
-    
-                
+           
         with tab1:
             product(0)
-
         with tab2:  
             product(1)
-
-
         with tab3:
-          col5, col6= st.columns(2)
-          with col5:
-             ok=os.path.join('https://m.media-amazon.com/images/I/', list(filenames[indices[0][2]].split("\\"))[1] )
-             st.image(ok)
-          with col6:
-            try:
-              v2=(product['DESCRIPTION'][ref.index(ls[2])]).split(" ")[0:3]
-              st.title((' '.join([str(elem) for elem in v2])).upper())
-              st.markdown(product['PAGE URL'][ref.index(ls[2])], unsafe_allow_html=True)
-            except :
-              st.markdown('ERROR-INFORMATION NOT FOUND IN DATASET')
-
+            product(2)
         with tab4:
-          col7, col8= st.columns(2)
-          with col7:
-             ok=os.path.join('https://m.media-amazon.com/images/I/', list(filenames[indices[0][3]].split("\\"))[1] )
-             st.image(ok)
-          with col8:
-            try:
-              v3=(product['DESCRIPTION'][ref.index(ls[3])]).split(" ")[0:3]
-              st.title((' '.join([str(elem) for elem in v3])).upper())
-              st.markdown(product['PAGE URL'][ref.index(ls[3])], unsafe_allow_html=True)
-            except :
-              st.markdown('ERROR-INFORMATION NOT FOUND IN DATASET')
-
+            product(3)
         with tab5:
-          col9, col10= st.columns(2)
-          with col9:
-             ok=os.path.join('https://m.media-amazon.com/images/I/', list(filenames[indices[0][4]].split("\\"))[1] )
-             st.image(ok)
-          with col10:
-            try:
-              v4=(product['DESCRIPTION'][ref.index(ls[4])]).split(" ")[0:3]
-              st.text((' '.join([str(elem) for elem in v4])).upper())
-              st.markdown(product['PAGE URL'][ref.index(ls[4])], unsafe_allow_html=True)
-            except :
-              st.markdown('ERROR-INFORMATION NOT FOUND IN DATASET')
+            product(4)
+
 
 
