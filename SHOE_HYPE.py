@@ -35,7 +35,7 @@ col13, col14 = st.columns(2)
 with col13:
   st.image("https://i.pinimg.com/originals/1f/f5/94/1ff594ed96063b9db4866efaaa864ef6.gif")
   st.markdown(button_link('https://www.linkedin.com/in/dhruvtyagi15/', 'Get Connected'), unsafe_allow_html=True)
-  if st.button('ABOUT THE WEBSITE'):
+  if st.button('About the Website'):
     st.markdown("It is a **CNN** based Recommendor System which uses **RESNET** for feature extraction. The features of the uploaded image are compared with the help of **Scikit Learn**. Then the images are Recommended and the accompanied data is fetched from the dataset.")
 
 with col14:
@@ -100,15 +100,35 @@ if uploaded_file is not None:
       ls.append(data[i])
       i=+1
         
+    d=[]
+    for i in ls:
+      try :
+        ref=product['REFERENCE'].tolist()
+        ind = ref.index(i)
+        d.append(product['DESCRIPTION'][ind])
+      except :
+        d.append('INFORMATION NOT FOUND IN DATABASE')
+      i=+1
+      
+    u=[]
+    for i in ls:
+      try :
+        ref=product['REFERENCE'].tolist()
+        ind = ref.index(i)
+        u.append(product['PAGE URL'][ind])
+      except:
+        u.append("INFORMATION NOT FOUND IN DATABASE")
+      i=+1
+        
     def result_function(ind):
         col1, col2= st.columns(2)
         with col1:
-            ok=os.path.join('https://m.media-amazon.com/images/I/', list(filenames[indices[0][ind]].split("\\"))[1] )
-            st.image(ok)
+            var=os.path.join('https://m.media-amazon.com/images/I/', list(filenames[indices[0][ind]].split("\\"))[1] )
+            st.image(var)
         with col2:
             try :
-                v=(product['DESCRIPTION'][ref.index(ls[ind])]).split(" ")[0:3]
-                st.title((' '.join([str(elem) for elem in v])).upper())
+                desc=(product['DESCRIPTION'][ref.index(ls[ind])]).split(" ")[0:3]
+                st.title((' '.join([str(elem) for elem in desc])).upper())
                 st.markdown(product['PAGE URL'][ref.index(ls[ind])], unsafe_allow_html=True)
             except :
                 st.markdown('ERROR-INFORMATION NOT FOUND IN DATASET')
