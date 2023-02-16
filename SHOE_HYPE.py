@@ -216,8 +216,11 @@ if uploaded_file is not None:
             except :
               st.markdown('ERROR-INFORMATION NOT FOUND IN DATASET')
             
- 
-st_button('linkedin', 'https://www.linkedin.com/in/dhruv-tyagi-9a526b218/', 'LINKEDIN', icon_size)
-st_button('github', 'https://github.com/Dhruv-0001', 'GITHUB', icon_size)
-st_button('instagram', 'https://www.instagram.com/iamdhruv.tyagi/', 'INSTAGRAM', icon_size)
-st_button('', 'https://mail.google.com/mail/?view=cm&source=mailto&to=dhruvtyagionly1@gmail.com', 'dhruvtyagionly1@gmail.com', icon_size)
+from bokeh.models.widgets import Div
+
+if st.button('Go to Streamlit'):
+    js = "window.open('https://www.streamlit.io/')"  # New tab or window
+    js = "window.location.href = 'https://www.streamlit.io/'"  # Current tab
+    html = '<img src onerror="{}">'.format(js)
+    div = Div(text=html)
+    st.bokeh_chart(div)
