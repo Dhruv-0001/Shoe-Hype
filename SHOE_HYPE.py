@@ -14,9 +14,6 @@ from tqdm import tqdm
 from sklearn.neighbors import NearestNeighbors
 import webbrowser
 from bokeh.models.widgets import Div
-from st_functions import *
-
-icon_size = 20
 
 hide_menu_style ="""
     <style>
@@ -100,7 +97,14 @@ data = os.listdir("SHOES_IMAGES")
 
 st.subheader("INSTRUCTIONS:")
 st.markdown("__FOR BETTER RECOMMENDATIONS UPLOAD THE IMAGES WHICH ONLY HAVE SHOE PRODUCT, ALINGED HORIZONTALLY AND HAVE WHITE BACKGROUND.__")
-st.markdown("DOWNLOAD SAMLE IMAGES FROM MY GITHUB https://github.com/Dhruv-0001/sample-shoe-images-ShoeHype.git",unsafe_allow_html =True)
+st.markdown("DOWNLOAD SAMLE IMAGES FROM MY GITHUB,unsafe_allow_html =True)
+if st.button('Download'):
+    js = "window.open('https://github.com/Dhruv-0001/Sample-Images.git')"  # New tab or window
+    js = "window.location.href = 'https://github.com/Dhruv-0001/Sample-Images.git'"  # Current tab
+    html = '<img src onerror="{}">'.format(js)
+    div = Div(text=html)
+    st.bokeh_chart(div)
+    
 uploaded_file = st.file_uploader("Choose an image") 
 if uploaded_file is not None:
   if save_uploaded_file(uploaded_file):
@@ -215,12 +219,4 @@ if uploaded_file is not None:
               st.markdown(product['PAGE URL'][ref.index(ls[4])], unsafe_allow_html=True)
             except :
               st.markdown('ERROR-INFORMATION NOT FOUND IN DATASET')
-            
-from bokeh.models.widgets import Div
 
-if st.button('Go to Streamlit'):
-    js = "window.open('https://www.streamlit.io/')"  # New tab or window
-    js = "window.location.href = 'https://www.streamlit.io/'"  # Current tab
-    html = '<img src onerror="{}">'.format(js)
-    div = Div(text=html)
-    st.bokeh_chart(div)
