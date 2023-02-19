@@ -10,18 +10,20 @@ It is a Shoe Recommender System which recommends the shoes with buying option to
 
 https://user-images.githubusercontent.com/109892892/191002579-5881d77e-6eb5-45bb-8ad1-0ffaaee97ab6.mp4
   
-## Further functionalities-
-- It is CNN based Recommender System and uses RESNET for feature extraction.
+## Project Functionalities-
+- It is CNN based Recommender System and uses RESNET50 for feature extraction.
 -	The Features of uploaded image are compared with the features of dataset images with the help of Scikit Learn pipeline.
-- How to Use?
--	First go to the Webpage and upload the image of the shoe one is looking for. 
--	Then find the recommendations.
--	Top 5 recommendations will be shown to the user along with the buying options.
-
+- The user Interface is designed using Python and Streamlit and dataset having more than 20k+ rows was cleaned and analyzed to fetch the desired product details.
 
 ## FLOW CHART
   
 ![SHOE_HYPE_FLOW_CHART](https://user-images.githubusercontent.com/109892892/191014150-35200001-8c8a-4659-9bdb-04d694d52419.png)
+
+## How to Use?
+-	First go to the Webpage and upload the image of the shoe one is looking for. 
+-	Then find the recommendations.
+-	Top 5 recommendations will be shown to the user along with the buying options.
+
 
 ## Usage
 
