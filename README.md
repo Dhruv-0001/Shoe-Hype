@@ -1,8 +1,10 @@
-# Shoe-Hype〽️
-### This is a website that help 👟 shoe lovers get shoe recommendations and buying options on the basis of the shoe image uploaded by them.
+# Shoe Hype 👟
+### This is a website that help shoe lovers get shoe recommendations and buying options on the basis of the shoe image uploaded by them.
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)                 
 [![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-360/) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://dhruv-0001-shoe-hype-shoe-hype-8ebvwa.streamlitapp.com/)
 
 ## [Live Link](https://dhruv-0001-shoe-hype-shoe-hype-8ebvwa.streamlitapp.com/)
 
@@ -11,10 +13,10 @@
 https://user-images.githubusercontent.com/109892892/191002579-5881d77e-6eb5-45bb-8ad1-0ffaaee97ab6.mp4
   
 ## Features & Tech Stack
-- This is a CNN based Recommender System and uses RESNET 50 for feature extraction.
--	The Features of uploaded image are compared with the features of dataset images with the help of Scikit Learn pipeline.
-- The user Interface is designed using Python and Streamlit.
-- For fetching product details dataset having more than 20k+ rows was cleaned and analyzed.
+- This is a [CNN](https://en.wikipedia.org/wiki/Convolutional_neural_network) based Recommender System and uses [RESNET 50](https://www.mathworks.com/help/deeplearning/ref/resnet50.html) for feature extraction.
+-	The Features of uploaded image are compared with the features of dataset images with the help of [scikit-learn](https://scikit-learn.org/stable/) pipeline.
+- The user Interface is designed using [Python](https://www.python.org/) and [Streamlit](https://streamlit.io/).
+- For fetching the product details dataset having more than 20k+ rows was cleaned and analyzed.
 
 ## Work Plan
   
@@ -41,15 +43,14 @@ https://user-images.githubusercontent.com/109892892/191002579-5881d77e-6eb5-45bb
   ```
 
 
-## ⭐ Feature Request
+## Feature Request
 - Feel free to [Open an issue](https://github.com/Dhruv-0001/Shoe-Hype/issues) on GitHub and work together on adding new features.
 - Connect with me on [LinkedIn](https://www.linkedin.com/in/dhruvtyagi15/). I'd love ❤️️ to hear that you love this project.
 <a id="release-notes"></a>
 
 <a id="license"></a>
-## 📜 License
+## License
 This software is open source, licensed under the [MIT License](https://github.com/PawanKolhe/color-calendar/blob/master/LICENSE).
 
-## Just follow☝️ me and Star⭐ my repository 
 
-## [Buy me a Coffee☕](https://www.buymeacoffee.com/DhruvTyagi)
+### [Buy me a Coffee☕](https://www.buymeacoffee.com/DhruvTyagi)
