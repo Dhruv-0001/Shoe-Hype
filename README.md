@@ -10,12 +10,13 @@
 
 https://user-images.githubusercontent.com/109892892/191002579-5881d77e-6eb5-45bb-8ad1-0ffaaee97ab6.mp4
   
-## Functionalities
-- It is CNN based Recommender System and uses RESNET 50 for feature extraction.
+## Features & Tech Stack
+- This is a CNN based Recommender System and uses RESNET 50 for feature extraction.
 -	The Features of uploaded image are compared with the features of dataset images with the help of Scikit Learn pipeline.
-- The user Interface is designed using Python and Streamlit and dataset having more than 20k+ rows was cleaned and analyzed to fetch the desired product details.
+- The user Interface is designed using Python and Streamlit.
+- For fetching product details dataset having more than 20k+ rows was cleaned and analyzed.
 
-## Flow Chart
+## Work Plan
   
 ![SHOE_HYPE_FLOW_CHART](https://user-images.githubusercontent.com/109892892/191014150-35200001-8c8a-4659-9bdb-04d694d52419.png)
 
@@ -33,10 +34,10 @@ https://user-images.githubusercontent.com/109892892/191002579-5881d77e-6eb5-45bb
   ```
   pip install -r requirements.txt
   ```
-- `App.py` is the main Python file of Streamlit Web-Application. 
+- `SHOE_HYPE.py` is the main Python file of Streamlit Web-Application. 
 - To run app, write following command in CMD. or use any IDE.
   ```
-  streamlit run App.py
+  streamlit run SHOE_HYPE.py
   ```
 
 
