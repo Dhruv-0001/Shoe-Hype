@@ -43,7 +43,7 @@ https://user-images.githubusercontent.com/109892892/191002579-5881d77e-6eb5-45bb
   ```
 
 
-## Feature Request
+## Work Together
 - Feel free to [Open an issue](https://github.com/Dhruv-0001/Shoe-Hype/issues) on GitHub and work together on adding new features.
 - Connect with me on [LinkedIn](https://www.linkedin.com/in/dhruvtyagi15/). I'd love ❤️️ to hear that you love this project.
 <a id="release-notes"></a>
@@ -52,5 +52,3 @@ https://user-images.githubusercontent.com/109892892/191002579-5881d77e-6eb5-45bb
 ## License
 This software is open source, licensed under the [MIT License](https://github.com/PawanKolhe/color-calendar/blob/master/LICENSE).
 
-
-### [Buy me a Coffee☕](https://www.buymeacoffee.com/DhruvTyagi)
