@@ -12,7 +12,6 @@ import os
 import pickle
 from tqdm import tqdm
 from sklearn.neighbors import NearestNeighbors
-import cv2
 import pandas as pd
 import csv
 
@@ -72,14 +71,7 @@ value = indices.tolist()[0]
 
 ls=[]
 for i in value:
-    ls.append(data[i])
-    i=+1
-
-for file in indices [0]:
-    
-    temp_img = cv2.imread(filenames_shoes[file])
-    cv2.imshow('output',cv2.resize(temp_img,(512,512)))
-    cv2.waitKey(0) 
+    ls.append(data[i]) 
 
 for i in ls :
     ref=product['REFERENCE'].tolist()
@@ -89,4 +81,3 @@ for i in ls :
         print(product['PAGE URL'][ind])
     except:
         print('INFORMATION NOT AVAILABLE IN DATASET.')
-    i=+1
